@@ -32,9 +32,10 @@ const TodoCards: React.FC = () => {
     return (
         <div>
             {todos.map((todo) => (
-                <div key={todo.id}>
+                <div key={todo.id} style={todo.done ? {backgroundColor:"blue"} : {backgroundColor:"red"}}>
                     <TodoCard todo={todo} />
                     <button onClick={() => handleComplete(todo.id)}>Complete</button>
+                    {' '}
                     <button onClick={() => handleDelete(todo.id)}>Delete</button>
                 </div>
             ))}

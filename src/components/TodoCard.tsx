@@ -6,9 +6,9 @@ interface TodoCardProps {
 
 const TodoCard: React.FC<TodoCardProps> = ({ todo }) => {
     return (
-        <div className="card" style={{backgroundColor: "lightblue"}}>
+        <div className="card">
             <h3>{todo.description}</h3>
-            <p>{todo.done ? 'Completed' : 'Not Completed'}</p>
+            {/* <p>{todo.done ? 'Completed' : 'Not Completed'}</p> */}
             <p>{todo.date}</p>
         </div>
     );
